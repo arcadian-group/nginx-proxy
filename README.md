@@ -1,6 +1,8 @@
 # nginx-proxy
 
-nginx-proxy with `server_tokens off` and `client_max_body_size 100m`
+jwilder's nginx-proxy with `server_tokens off` and `client_max_body_size 100m`.
+
+All credits to https://github.com/jwilder/nginx-proxy
 
 ## Usage
 
