@@ -1,5 +1,5 @@
 FROM jwilder/nginx-proxy
-MAINTAINER Dylan Pinn <dylan@arcadiandigital.com.au>
+LABEL maintainer="dylan@arcadiandigital.com.au"
 RUN { \
       echo 'server_tokens off;'; \
       echo 'client_max_body_size 100m;'; \
