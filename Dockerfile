@@ -4,3 +4,6 @@ RUN { \
       echo 'server_tokens off;'; \
       echo 'client_max_body_size 100m;'; \
     } > /etc/nginx/conf.d/my_proxy.conf
+
+HEALTHCHECK --interval=1m --timeout=30s --start-period=5s --retries=3 \
+  CMD nginx -t || exit 1
