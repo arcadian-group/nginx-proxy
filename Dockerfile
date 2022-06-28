@@ -6,6 +6,7 @@ RUN { \
       echo 'fastcgi_read_timeout 600;'; \
       echo 'proxy_read_timeout 600;'; \
     } > /etc/nginx/conf.d/my_proxy.conf
-
+CMD export DOCKER_BUILDKIT=0
+CMD export COMPOSE_DOCKER_CLI_BUILD=0
 HEALTHCHECK --interval=1m --timeout=30s --start-period=5s --retries=3 \
   CMD nginx -t || exit 1
